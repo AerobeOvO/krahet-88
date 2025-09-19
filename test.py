@@ -1,0 +1,3 @@
+list = []
+
+print(sum(list))
