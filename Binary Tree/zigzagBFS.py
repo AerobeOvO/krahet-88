@@ -14,8 +14,8 @@ class Solution:
             tmp = deque()
             for _ in range(len(queue)):
                 node = queue.popleft()
-                if len(res) % 2 == 0: tmp.append(node.val) # 奇数层 -> 插入队列尾部
-                else: tmp.appendleft(node.val) # 偶数层 -> 插入队列头部
+                if len(res) % 2 == 0: tmp.append(node.val)
+                else: tmp.appendleft(node.val)
                 if node.left: queue.append(node.left)
                 if node.right: queue.append(node.right)
             res.append(list(tmp)) #convert to list
