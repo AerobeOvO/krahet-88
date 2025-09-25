@@ -10,10 +10,11 @@ struct ListNode* reverseList(struct ListNode* head) {
         return head;
     }
 
+    // newHead is used to store the head of the reversed list
     struct ListNode* newHead = reverseList(head->next)
 
-    head->next->next = head;
-    head->next = null;
+    head->next->next = head;  // reverse the direction of arrow
+    head->next = null; // cut off the old arrow, avoid cycle
 
     return newHead;
 }
